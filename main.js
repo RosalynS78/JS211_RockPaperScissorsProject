@@ -70,13 +70,12 @@ hand2 = hand2.toLowerCase().trim();
   else if (hand1 == "rock" && hand2 == "paper") {
     return "Hand two wins!"
   }
-}
-
 
 
 //  then end with a else getPrompt()
-
-
+// always returns ask the user for another input
+else getPrompt();
+}
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
