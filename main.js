@@ -12,12 +12,71 @@ const rl = readline.createInterface({
 });
 
 // the function that will be called by the unit test below
+// describe('#rockPaperScissors()', () => {
 const rockPaperScissors = (hand1, hand2) => {
+
 
   // Write code here
   // Use the unit test to see what is expected
 
+// should scrub input to ensure lowercase with "trim"ed whitepace'
+// .toLowercase converts a string to lower case letters
+// .trim removes whitespace from both ends of a string
+// use dot notation to apply two methods to a variable
+hand1 = hand1.toLowerCase().trim();  
+hand2 = hand2.toLowerCase().trim();
+
+// && (logical and) operator returns true if both operands are true and returns false        otherwise
+// == (equal to) operator compares two variables but ignores the datatype of variable
+// || operator (logical or) if and only if one or more is ture
+//  | (or)
+
+  // it('should detect a tie')
+  //   assert.equal(rockPaperScissors('rock', 'rock'), "It's a tie!");
+  //   assert.equal(rockPaperScissors('paper', 'paper'), "It's a tie!");
+  //   assert.equal(rockPaperScissors('scissors', 'scissors'), "It's a tie!");
+    if (hand1 == "rock" && hand2 == "rock") {
+      return "It's a tie!"
+    }
+    else if (hand1 == "paper" && hand2 == "paper") {
+      return "It's a tie!"
+    } else if (hand1 == "scissors" && hand2 == "scissors") {
+      return "It's a tie!"
+    }
+  
+ 
+  
+
+  // it('should detect which hand won)
+// h1(r) h2(s) =h1 | h1(s) h2(p) =h1 | h1(p) h2(r) =h1
+// Hand one wins
+  else if (hand1 == "rock" && hand2 == "scissors") {
+    return "Hand one wins!"
+  }
+  else if (hand1 == "scissors" && hand2 == "paper") {
+    return "Hand one wins!"
+  }
+  else if (hand1 == "paper" && hand2 == "rock") {
+    return "Hand one wins!"
+  }
+// h1(s) h2(r) =h2 | h1(p) h2(s) =h2 | h1(r) h2(p) =h2
+// Hand two wins
+  else if (hand1 == "scissors" && hand2 == "rock") {
+    return "Hand two wins!"
+  }
+  else if (hand1 == "paper" && hand2 == "scissors") {
+    return "Hand two wins!"
+  }
+  else if (hand1 == "rock" && hand2 == "paper") {
+    return "Hand two wins!"
+  }
 }
+
+
+
+//  then end with a else getPrompt()
+
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
